@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+.web-editor-wrapper {
+  display: flex;
+  flex-wrap: wrap; 
+  border: 1px solid #3a3a3a; 
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 2rem 0;
+  min-height: 400px; 
+  background: #2d2d2d; 
+  direction: ltr;
+}
+
+.editor-pane {
+  flex: 1;
+  min-width: 300px;
+  height: 400px; 
+  position: relative; 
+  overflow: auto; 
+}
+
+/* (1) المحرر نفسه */
+.code-editor-area {
+  min-height: 100% !important; 
+  font-family: 'Fira Code', monospace !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+
+}
+
+/* (2) الطبقة السفلية (العرض الملون) */
+.code-editor-area pre {
+    background: #2d2d2d !important; 
+    color: #ccc; /* (ده هيخلي لون النص الأساسي (الأبيض) ثابت) */
+}
+
+/* (3) الطبقة العلوية (اللي بتكتب فيها) */
+.code-editor-area textarea {
+    background: transparent !important; /* خلفية شفافة */
+    
+    /* (مهم جداً) الحل النهائي لمشكلة الكلام المخفي */
+    color: transparent !important; 
+    
+    /* (مهم جداً) لون مؤشر الكتابة يكون أبيض عشان تشوفه */
+    caret-color: #fff !important; 
+}
+
+
+
+/* (4) الـ Pane بتاع النتيجة (زي ما هو) */
+.preview-pane {
+  flex: 1;
+  min-width: 300px;
+  height: 400px;
+  background: #ffffff; 
+  color: #333;
+  border-left: 2px solid #3a3a3a; 
+}
+
+.preview-pane iframe {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/*  الموبايل  */
+@media screen and (max-width: 768px) {
+  .web-editor-wrapper {
+    flex-direction: column;
+    min-height: 800px; 
+    direction: initial; 
+  }
+  .editor-pane {
+    height: 400px;
+    overflow: auto;
+  }
+  .preview-pane {
+    border-left: none;
+    border-top: 2px solid #3a3a3a;
+  }
+}
+

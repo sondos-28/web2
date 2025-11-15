@@ -1,0 +1,165 @@
+.auth-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  padding: 4rem 2rem;
+  background-color: var(--bg); /* الصفحة كلها بتاخد لون الثيم */
+}
+
+.auth-card {
+  width: 900px;
+  max-width: 95%;
+  display: flex;
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden; /* مهم عشان يقص الكيرف */
+  box-shadow: 0 10px 40px var(--shadow);
+  position: relative; /* مهم عشان الكيرف */
+}
+
+/* 1. البانل الجانبي (المتدرج) */
+.auth-panel {
+  flex: 1;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* اللون المتدرج بناءً على الباليتة */
+  background: var(--gradient); 
+  color: #FFFFFF; /* النص هنا دايماً أبيض */
+  z-index: 2; /* فوق الكيرف */
+  position: relative; /* عشان يبقى فوق الكيرف */
+}
+
+.auth-panel h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.auth-panel p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #E5E7EB; /* أبيض هادئ */
+}
+
+.toggle-btn {
+  background: transparent;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none; /* عشان ده Link */
+}
+.toggle-btn:hover {
+  background: #FFFFFF;
+  color: var(--primary); /* لون النص هيتغير للبنفسجي */
+  text-decoration: none;
+}
+
+/* 2. قسم الفورم (الأبيض/الغامق) */
+.auth-form-section {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--text-main);
+  z-index: 2; /* فوق الكيرف */
+  position: relative;
+}
+
+.auth-form-section h1 {
+  font-size: 2.5rem;
+  color: var(--text-main);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  background-color: var(--bg); /* خلفية Input زي خلفية الصفحة */
+  color: var(--text-main);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 5px var(--primary);
+}
+
+.password-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.submit-btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.submit-btn:hover {
+  background: var(--gradient); /* هوفر متدرج */
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.social-login {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.social-login p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.social-icons a {
+  color: var(--text-secondary);
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: var(--primary);
+}

@@ -1,0 +1,257 @@
+/* ------------------------------------------- */
+/* --- 1. السكشن الأول (الكورسات) --- */
+/* ------------------------------------------- */
+
+.featured-courses {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.featured-courses h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--text-main);
+  border-bottom: 3px solid var(--primary);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* (ده الكود اللي اتمسح عندك) */
+.course-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: 0 5px 15px var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* (عشان الأيقونة تتوسط) */
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px var(--shadow);
+}
+
+.course-card h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: var(--text-main);
+}
+
+.course-card p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+/* (ده كود الزرار المتحرك) */
+.button-link-wrapper {
+  text-decoration: none;
+  margin-top: 1.5rem;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: var(--text-main);
+  box-shadow: 0 0 0 2px var(--primary);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: var(--text-main);
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #fff;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px var(--primary);
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+
+/* ------------------------------------------- */
+/* --- 2. السكشن الثاني (لماذا نحن) --- */
+/* ------------------------------------------- */
+
+.why-us {
+  padding: 6rem 2rem;
+  background-color: var(--bg);
+}
+
+.why-us-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.why-us-content h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+  border-bottom: 3px solid var(--primary);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.why-us-description {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.feature-item svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.feature-item h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.why-us-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.why-us-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+/* (تعديل للموبايل) */
+@media (max-width: 960px) {
+  .why-us-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .why-us-content {
+    text-align: center;
+  }
+
+  .why-us-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feature-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .why-us-image {
+    order: -1; 
+  }
+}

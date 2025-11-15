@@ -1,0 +1,25 @@
+.about-page {
+  min-height: 60vh;
+}
+
+.about-page h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.about-page h2 {
+  font-size: 2rem;
+  color: var(--text-light);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.about-page p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+}
