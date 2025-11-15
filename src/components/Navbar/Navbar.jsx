@@ -6,7 +6,7 @@ import Switch from '../ThemeSwitch/Switch.jsx';
 import LoginButton from '../LoginButton/LoginButton.jsx';
 
 const Navbar = () => {
-  // (لوجيك الثيم زي ما هو)
+  // Theme logic
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
@@ -24,7 +24,7 @@ const Navbar = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
-  // (لوجيك الموبايل منيو زي ما هو)
+  // Mobile menu logic
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const handleMobileMenuToggle = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -33,19 +33,19 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
-  // (لوجيك قائمة الكورسات زي ما هو)
+  // Dropdown logic
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
         
-        {/* --- (الكتلة اليمين) اللوجو --- */}
+        {/* Logo */}
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           <FaLaptopCode /> Web2
         </Link>
 
-        {/* --- القائمة الأساسية --- */}
+        {/* Menu */}
         <ul className={isMobileMenuOpen ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
             <Link to="/" className="nav-links" onClick={closeMobileMenu}>
@@ -78,19 +78,20 @@ const Navbar = () => {
               تواصل معنا
             </Link>
           </li>
-          
-          {/* (زرار تسجيل الدخول - للموبايل فقط) */}
+
+          {/* Login button for mobile */}
           <li className="nav-item-mobile" onClick={closeMobileMenu}>
             <LoginButton />
           </li>
-          
         </ul>
 
-        {/* --- (الكتلة الشمال) الأزرار --- */}
+        {/* Controls */}
         <div className="nav-controls">
           
-          {/* --- (جديد) رجعنا الزرار هنا للديسكتوب --- */}
-          <LoginButton />
+          {/* Login button desktop */}
+          <div className="user-profile">
+            <LoginButton />
+          </div>
           
           <Switch theme={theme} onToggle={handleThemeToggle} />
           
