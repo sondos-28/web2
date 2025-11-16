@@ -8,11 +8,9 @@ import 'prismjs/components/prism-markup';
 import 'prismjs/themes/prism-tomorrow.css'; 
 import './InteractiveEditor.css'; 
 
-// (1) تعديل: خليناه يقبل اللغة
 const highlightCode = (code, language) =>
   highlight(code || '', languages[language] || languages.markup, language);
 
-// (2) تعديل: ضفنا "language" كـ prop
 const InteractiveEditor = ({ defaultCode = '', language = 'markup' }) => {
   const [code, setCode] = useState(defaultCode);
   const [outputSrc, setOutputSrc] = useState('');
@@ -30,7 +28,6 @@ const InteractiveEditor = ({ defaultCode = '', language = 'markup' }) => {
         <Editor
           value={code}
           onValueChange={(code) => setCode(code)}
-          // (3) تعديل: بعتناله اللغة عشان يلونها صح
           highlight={(code) => highlightCode(code, language)}
           padding={10}
           className="code-editor-area"

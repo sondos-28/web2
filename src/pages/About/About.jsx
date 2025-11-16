@@ -1,34 +1,28 @@
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
-// (1) استدعينا الأيقونات الجديدة اللي هنحتاجها
 import { FaUniversity, FaSchool, FaUserGraduate, FaEnvelope, FaChalkboardTeacher, FaBook } from 'react-icons/fa';
 
 const AboutPage = () => {
   const cardRef = useRef(null);
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
 
-  // (2) دي الدالة اللي بتعمل التأثير ثلاثي الأبعاد وتأثير الإضاءة
   const handleMouseMove = (e) => {
     if (!cardRef.current) return;
 
     const rect = cardRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left; // موقع الماوس (X) جوه الكارت
-    const y = e.clientY - rect.top;  // موقع الماوس (Y) جوه الكارت
+    const x = e.clientX - rect.left; 
+    const y = e.clientY - rect.top; 
     const width = rect.width;
     const height = rect.height;
 
-    const rotateX = -((y / height) - 0.5) * 20; // (بيخليه يلف لفوق وتحت - بحد أقصى 10 درجات)
-    const rotateY = ((x / width) - 0.5) * 20;  // (بيخليه يلف يمين وشمال - بحد أقصى 10 درجات)
-
-    // بنحفظ الـ "ستايل" بتاع الميلان
+    const rotateX = -((y / height) - 0.5) * 20; 
+    const rotateY = ((x / width) - 0.5) * 20;  
     setRotate({ x: rotateX, y: rotateY });
 
-    // بنحرك "الإضاءة" اللي في الخلفية
     cardRef.current.style.setProperty('--mouse-x', `${x}px`);
     cardRef.current.style.setProperty('--mouse-y', `${y}px`);
   };
 
-  // (3) دي الدالة اللي بترجع الكارت لوضعه الطبيعي
   const handleMouseLeave = () => {
     setRotate({ x: 0, y: 0 });
   };
@@ -49,7 +43,7 @@ const AboutPage = () => {
           <p>كلية التربية النوعية - قسم تكنولوجيا التعليم</p>
         </CardHeader>
 
-        {/* --- 2. بياناتك الشخصية --- */}
+        {/* --- 2. بياناتي الشخصية --- */}
         <CardBody>
           <div className="profile-main">
             <FaUserGraduate className="profile-icon" />
@@ -88,21 +82,20 @@ const AboutPage = () => {
   );
 };
 
-// (4) ده كود الـ CSS الكامل للكارت
+//  كود الـ CSS 
 const PageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 90vh;
   padding: 4rem 2rem;
-  background-color: var(--bg); /* (بياخد لون الثيم) */
+  background-color: var(--bg); 
 `;
 
 const CardWrapper = styled.div`
   width: 100%;
   max-width: 450px;
   
-  /* (1) التأثير الزجاجي (متوافق مع الثيم) */
   background: rgba(var(--card-bg-rgb), 0.6);
   backdrop-filter: blur(15px);
   border: 1px solid var(--border);
@@ -112,12 +105,11 @@ const CardWrapper = styled.div`
   padding: 2.5rem;
   color: var(--text-main);
   
-  /* (2) إعدادات التأثير ثلاثي الأبعاد */
-  transition: transform 0.1s linear; /* (للحركة السريعة) */
+  transition: transform 0.1s linear; 
   position: relative;
   overflow: hidden; /* (عشان الإضاءة متخرجش بره) */
 
-  /* (3) كود الإضاءة (Glow) اللي بتتبع الماوس */
+  /* كود الإضاءة (Glow) اللي بتتبع الماوس */
   &::before {
     content: '';
     position: absolute;
@@ -137,7 +129,7 @@ const CardWrapper = styled.div`
   }
 
   &:hover::before {
-    opacity: 1; /* (إظهار الإضاءة عند الهوفر) */
+    opacity: 1; 
   }
 `;
 

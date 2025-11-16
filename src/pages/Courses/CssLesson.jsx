@@ -1,8 +1,7 @@
 import React from 'react';
 import InteractiveEditor from '../../components/InteractiveEditor/InteractiveEditor.jsx';
-import './Course.css'; // (بنستخدم نفس ملف التنسيق)
+import './Course.css'; 
 
-// --- (أكواد تفاعلية جاهزة لكل جزء) ---
 
 const code_Selectors = `
 <h1 id="main-title">عنوان بـ ID</h1>
@@ -129,7 +128,6 @@ const code_Flexbox = `
 </div>
 `;
 
-// --- المكون الأساسي للصفحة ---
 
 const CssLesson = () => {
   return (

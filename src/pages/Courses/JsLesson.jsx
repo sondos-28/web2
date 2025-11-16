@@ -2,7 +2,6 @@ import React from 'react';
 import InteractiveEditor from '../../components/InteractiveEditor/InteractiveEditor.jsx';
 import './Course.css';
 
-// --- (أكواد تفاعلية جاهزة لكل جزء) ---
 
 const code_Variables = `
 <!-- (1) مفيش HTML، الكود كله جافاسكريبت -->
@@ -120,7 +119,6 @@ const code_Conditionals = `
 </style>
 `;
 
-// --- المكون الأساسي للصفحة ---
 
 const JsLesson = () => {
   return (

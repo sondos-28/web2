@@ -1,16 +1,16 @@
-/* 1. الوضع الافتراضي (فاتح) */
+/* 1. الوضع  (فاتح) */
 :root {
   --bg: #F5F7FB;
   --card-bg: #FFFFFF;
   --text-main: #0A0F1E;
   --text-secondary: #6C728B;
   --primary: #5B45E0; /* بنفسجي فاتح: rgb(91, 69, 224) */
-  --primary-rgb: 91, 69, 224; /* (عشان الشفافية بتاعة زرار اللوجن) */
+  --primary-rgb: 91, 69, 224; 
   --accent: #007BFF;
   --border: #E2E8F0;
   --shadow: rgba(91, 69, 224, 0.15);
   --gradient: linear-gradient(90deg, #007BFF, #5B45E0);
-  --btn-inner-bg: #1a1a1a; /* (لون الزرار الداخلي بتاع اللوجن) */
+  --btn-inner-bg: #1a1a1a;
 }
 
 /* 2. الوضع الغامق */
@@ -20,7 +20,7 @@
   --text-main: #FFFFFF;
   --text-secondary: #A8B2D1;
   --primary: #7B61FF; /* بنفسجي نيون: rgb(123, 97, 255) */
-  --primary-rgb: 123, 97, 255; /* (عشان الشفافية بتاعة زرار اللوجن) */
+  --primary-rgb: 123, 97, 255; 
   --accent: #00E0FF;
   --border: #1B233A;
   --shadow: rgba(123, 97, 255, 0.25);
@@ -28,7 +28,6 @@
   --btn-inner-bg: #1a1a1a;
 }
 
-/* 3. تطبيق المتغيرات على الصفحة */
 body {
   background-color: var(--bg);
   color: var(--text-main);
@@ -46,7 +45,6 @@ body {
   padding: 0;
 }
 
-/* 4. تنسيقات عامة */
 a {
   color: var(--accent);
   text-decoration: none;

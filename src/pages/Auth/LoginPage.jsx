@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './AuthForm.css'; // هنستخدم نفس ملف التنسيق
+import './AuthForm.css'; 
 import { FaGoogle, FaFacebookF, FaGithub, FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const LoginPage = () => {
@@ -27,8 +27,6 @@ const LoginPage = () => {
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </span>
             </div>
-
-            {/* (ممكن تضيف "نسيت كلمة المرور؟" هنا لو حابب) */}
             
             <button type="submit" className="submit-btn">
               تسجيل الدخول
@@ -45,7 +43,6 @@ const LoginPage = () => {
           </div>
         </div>
 
-        {/* البانل الأيمن (للتبديل) */}
         <div className="auth-panel">
           <h2>ليس لديك حساب؟</h2>
           <p>انضم إلينا الآن وابدأ رحلتك التعليمية!</p>

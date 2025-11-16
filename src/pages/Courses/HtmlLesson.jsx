@@ -1,8 +1,7 @@
 import React from 'react';
 import InteractiveEditor from '../../components/InteractiveEditor/InteractiveEditor.jsx';
-import './Course.css'; // (بنستخدم نفس ملف التنسيق)
+import './Course.css'; 
 
-// --- أكواد تفاعلية جاهزة لكل جزء ---
 
 const code_Structure = `
 <!DOCTYPE html>
@@ -53,7 +52,6 @@ const code_Lists = `
 `;
 
 
-// --- المكون الأساسي للصفحة ---
 
 const HtmlLesson = () => {
   return (
@@ -120,7 +118,6 @@ const HtmlLesson = () => {
         <InteractiveEditor defaultCode={code_Lists} />
       </section>
 
-      {/* (ضيفي هنا دروس تانية زي الصور <img> والجداول <table> بنفس الطريقة) */}
       
     </div>
   );

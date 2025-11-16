@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'; // (1) عشان الزرار يشتغل كلينك
+import { Link } from 'react-router-dom'; 
 
 const HeaderButton = () => {
   return (
-    // (2) خلينا اللينك هو اللي يلف الزرار
     <Link to="/courses/html" style={{ textDecoration: 'none' }}>
       <StyledWrapper>
         <div className="btn-wrapper">
@@ -13,7 +12,6 @@ const HeaderButton = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
             </svg>
             
-            {/* (3) بسطنا النص عشان العربي والأنيميشن */}
             <div className="txt-wrapper">
               <span className="text">هيا ابدأ</span>
             </div>
@@ -24,7 +22,7 @@ const HeaderButton = () => {
   );
 }
 
-// (4) ده كود الـ CSS بتاعك مع تعديلات الألوان والشادو
+//  كود الـ CSS 
 const StyledWrapper = styled.div`
   .btn-wrapper {
     position: relative;
@@ -32,7 +30,6 @@ const StyledWrapper = styled.div`
   }
 
   .btn {
-    /* (تعديل) ظبطنا الألوان عشان تمشي مع الثيم */
     --border-radius: 24px;
     --padding: 4px;
     --transition: 0.4s;
@@ -116,7 +113,7 @@ const StyledWrapper = styled.div`
     flex-grow: 1;
     height: 24px;
     margin-right: 0.5rem;
-    fill: var(--text-secondary); /* (تعديل) لون الثيم */
+    fill: var(--text-secondary); 
     animation: flicker 2s linear infinite;
     animation-delay: 0.5s;
     filter: drop-shadow(0 0 2px #fff9);
@@ -131,7 +128,6 @@ const StyledWrapper = styled.div`
     }
   }
 
-  /* (تعديل) ستايل النص المبسط */
   .txt-wrapper {
     position: relative;
     display: flex;
@@ -142,7 +138,7 @@ const StyledWrapper = styled.div`
   .text {
     position: relative;
     z-index: 1;
-    color: var(--text-secondary); /* (تعديل) لون الثيم */
+    color: var(--text-secondary); 
     animation: letter-anim 2s ease-in-out infinite;
     transition:
       color var(--transition),
@@ -155,12 +151,10 @@ const StyledWrapper = styled.div`
     }
   }
 
-  /* (مسحنا كل الأكواد المعقدة بتاعة .txt-1, .txt-2, .btn-letter) */
 
-  /* (تعديل) خلينا الهوفر أوضح والشادو أقوى */
+
   .btn:hover {
     border: solid 1px hsla(var(--highlight-color-hue), 100%, 80%, 40%);
-    /* (ده الشادو الخارجي اللي طلبتيه) */
     box-shadow: 
       0 10px 25px -5px hsla(var(--highlight-color-hue), 100%, 70%, 0.4),
       inset 0px 1px 1px rgba(255, 255, 255, 0.2),
@@ -182,13 +176,12 @@ const StyledWrapper = styled.div`
   }
 
   .btn:hover::after {
-    opacity: 1; /* (إظهار الجلو العلوي) */
+    opacity: 1; 
     mask-image: linear-gradient(0deg, #fff, transparent);
   }
 
   .btn:hover .btn-svg {
     fill: var(--primary);
-    /* (الجلو بتاع الأيقونة) */
     filter: drop-shadow(0 0 5px hsl(var(--highlight-color-hue), 100%, 80%))
       drop-shadow(0 -4px 6px #0009);
     animation: none;

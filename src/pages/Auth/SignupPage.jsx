@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './AuthForm.css'; // استدعاء ملف التنسيق
+import './AuthForm.css'; 
 import { FaGoogle, FaFacebookF, FaGithub, FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const SignupPage = () => {
@@ -11,7 +11,6 @@ const SignupPage = () => {
     <div className="auth-page-container">
       <div className="auth-card ">
         
-        {/* البانل الأيسر (زي الصورة) */}
         <div className="auth-panel">
           <h2>لديك حساب بالفعل؟</h2>
           <p>قم بتسجيل الدخول للاستمتاع بكل مميزاتنا!</p>
@@ -20,7 +19,6 @@ const SignupPage = () => {
           </Link>
         </div>
 
-        {/* قسم الفورم (الأيمن) */}
         <div className="auth-form-section">
           <h1>إنشاء حساب</h1>
           <form className="auth-form">

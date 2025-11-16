@@ -20,7 +20,7 @@
   overflow: auto; 
 }
 
-/* (1) المحرر نفسه */
+/*  المحرر نفسه */
 .code-editor-area {
   min-height: 100% !important; 
   font-family: 'Fira Code', monospace !important;
@@ -29,26 +29,24 @@
 
 }
 
-/* (2) الطبقة السفلية (العرض الملون) */
+/*  الطبقة اللي تحت (العرض الملون) */
 .code-editor-area pre {
     background: #2d2d2d !important; 
-    color: #ccc; /* (ده هيخلي لون النص الأساسي (الأبيض) ثابت) */
+    color: #ccc; 
 }
 
-/* (3) الطبقة العلوية (اللي بتكتب فيها) */
+/*  الطبقة اللي فوق (اللي بتكتب فيها) */
 .code-editor-area textarea {
-    background: transparent !important; /* خلفية شفافة */
-    
-    /* (مهم جداً) الحل النهائي لمشكلة الكلام المخفي */
+    background: transparent !important; 
     color: transparent !important; 
     
-    /* (مهم جداً) لون مؤشر الكتابة يكون أبيض عشان تشوفه */
+    /*  لون مؤشر الكتابة  */
     caret-color: #fff !important; 
 }
 
 
 
-/* (4) الـ Pane بتاع النتيجة (زي ما هو) */
+/*  الـ Pane بتاع النتيجة */
 .preview-pane {
   flex: 1;
   min-width: 300px;

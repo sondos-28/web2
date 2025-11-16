@@ -4,15 +4,13 @@ import './Home.css';
 import { FaCode, FaMobileAlt, FaRocket, FaHtml5, FaCss3Alt, FaJsSquare } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-// (1) 👇👇 (جديد) اعمل امبورت للصورة اللي هتضيفها
-import WhyUsImage from '../../assets/why-us-image.png'; // (غير اسم الصورة ده لو حابب)
+import WhyUsImage from '../../assets/why-us-image.png'; 
 
 const Home = () => {
   return (
     <>
       <Header />
       
-      {/* --- سكشن الكورسات المميزة (زي ما هو) --- */}
       <section className="featured-courses container">
         <h2>ابدأ رحلتك الآن</h2>
         <div className="courses-grid">
@@ -23,7 +21,6 @@ const Home = () => {
             <p>أساس بناء جميع صفحات الويب.</p>
             <Link to="/courses/html" className="button-link-wrapper">
               <button className="animated-button">
-                {/* (الأسهم) */}
                 <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" /></svg>
                 <span className="text">تعلم الآن</span>
                 <span className="circle" />
@@ -38,7 +35,6 @@ const Home = () => {
             <p>تنسيق وتصميم صفحاتك بجاذبية.</p>
             <Link to="/courses/css" className="button-link-wrapper">
               <button className="animated-button">
-                {/* (الأسهم) */}
                 <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" /></svg>
                 <span className="text">تعلم الآن</span>
                 <span className="circle" />
@@ -64,19 +60,15 @@ const Home = () => {
         </div>
       </section>
 
-      {/* --- (2) 👇👇 هنا السكشن الجديد 👇👇 --- */}
       <section className="why-us container">
-        {/* (حاوية جديدة عشان نقسم الشاشة) */}
         <div className="why-us-wrapper">
           
-          {/* (العمود اليمين: الكلام) */}
           <div className="why-us-content">
             <h2>لماذا تختار منصتنا؟</h2>
             <p className="why-us-description">
               نحن نقدم تجربة تعلم فريدة تمزج بين الشرح النظري والتطبيق العملي الفوري.
             </p>
             
-            {/* (حولنا الكروت لقايمة مميزات) */}
             <ul className="features-list">
               <li className="feature-item">
                 <FaRocket size={30} />

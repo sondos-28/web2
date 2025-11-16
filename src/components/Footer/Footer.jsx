@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FaWhatsapp, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import './Footer.css';
 
-// (1) مكون الأيقونات
+//  الأيقونات
 const SocialIcons = () => {
   return (
     <StyledWrapper className="example-2">
@@ -39,7 +39,7 @@ const SocialIcons = () => {
   );
 }
 
-// (2) مكون الفوتر الأساسي
+//  الفوتر الأساسي
 const Footer = () => {
   return (
     <footer className="footer">
@@ -64,7 +64,7 @@ const Footer = () => {
   );
 };
 
-// (3) ده الـ CSS (مع الألوان الأصلية اللي طلبتيها)
+//  الـ CSS 
 const StyledWrapper = styled.ul`
   list-style: none;
   padding: 0;
@@ -89,7 +89,7 @@ const StyledWrapper = styled.ul`
     visibility: hidden;
     font-size: 14px;
     transition: all 0.3s ease;
-    /* (ملاحظة: لون الـ tooltip نفسه هيفضل بنفس لون الأيقونة) */
+  
   }
   .icon-content:hover .tooltip {
     opacity: 1;
@@ -130,15 +130,14 @@ const StyledWrapper = styled.ul`
     width: 100%;
     height: 0;
     transition: all 0.3s ease-in-out;
-    /* (هنلغي اللون الموحد من هنا) */
+
   }
   .icon-content a:hover .filled {
     height: 100%;
   }
 
   /* ------------------------------------------- */
-  /* (4) 👇👇 هنا رجعنا الألوان الأصلية 👇👇 */
-  /* ------------------------------------------- */
+
   .icon-content a[data-social="whatsapp"] .filled,
   .icon-content a[data-social="whatsapp"] ~ .tooltip {
     background-color: #128c7e;

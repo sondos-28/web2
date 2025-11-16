@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'; // (1) هنستخدم Link عشان يوجه لصفحة تسجيل الدخول
-
+import { Link } from 'react-router-dom'; 
 const LoginButton = () => {
   return (
     <StyledWrapper>
@@ -28,7 +27,6 @@ const StyledWrapper = styled.div`
     transition: all 0.3s ease;
     text-decoration: none;
 
-    /* (تعديل) بقى بيستخدم ألوان الباليتة الثالثة (البنفسجية) */
     background: linear-gradient(
       to bottom right,
       var(--primary) 0%, 
@@ -44,7 +42,6 @@ const StyledWrapper = styled.div`
   .user-profile:hover,
   .user-profile:focus {
     background-color: rgba(var(--primary-rgb), 0.7);
-    /* (تعديل) بقى بيستخدم متغير الظل بتاعنا */
     box-shadow: 0 0 15px var(--shadow); 
     outline: none;
   }
@@ -53,7 +50,6 @@ const StyledWrapper = styled.div`
     width: 127px;
     height: 47px;
     border-radius: 13px;
-    /* (تعديل) بيستخدم المتغير اللي ضفناه عشان اللون الأسود */
     background-color: var(--btn-inner-bg); 
     display: flex;
     align-items: center;

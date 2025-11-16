@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// (1) استدعاء الأيقونات (القديمة + الجديدة للسوشيال)
 import { 
   FaMapMarkerAlt, FaEnvelope, FaPhone, FaApple, FaGooglePlay,
   FaYoutube, FaInstagram, FaLinkedinIn, FaFacebookF 
 } from 'react-icons/fa';
 
-// (2) ده "مكون الفورم" (الكارت الزجاجي)
 const FormComponent = () => {
   return (
     <StyledFormWrapper>
@@ -16,7 +14,6 @@ const FormComponent = () => {
           <form className="form">
             <p id="heading">تواصل معنا</p>
             
-            {/* --- حقل الاسم --- */}
             <div className="field">
               <svg viewBox="0 0 24 24" fill="currentColor" height={16} width={16} xmlns="http://www.w3.org/2000/svg" className="input-icon">
                 <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
@@ -24,7 +21,6 @@ const FormComponent = () => {
               <input type="text" className="input-field" placeholder="الاسم" autoComplete="off" />
             </div>
 
-            {/* --- حقل الإيميل --- */}
             <div className="field">
               <svg viewBox="0 0 16 16" fill="currentColor" height={16} width={16} xmlns="http://www.w3.org/2000/svg" className="input-icon">
                 <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z" />
@@ -32,7 +28,6 @@ const FormComponent = () => {
               <input type="email" className="input-field" placeholder="البريد الإلكتروني" autoComplete="off" />
             </div>
 
-            {/* --- حقل الرسالة --- */}
             <div className="field">
               <svg viewBox="0 0 24 24" fill="currentColor" height={16} width={16} xmlns="http://www.w3.org/2000/svg" className="input-icon icon-message">
                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z" />
@@ -40,14 +35,12 @@ const FormComponent = () => {
               <textarea className="input-field" placeholder="رسالتك..." rows="4"></textarea>
             </div>
 
-            {/* --- زرار الإرسال --- */}
             <div className="btn">
               <button className="button1">
                 &nbsp;&nbsp;&nbsp;&nbsp;إرسال&nbsp;&nbsp;&nbsp;&nbsp;
               </button>
             </div>
 
-            {/* --- أيقونات السوشيال ميديا --- */}
             <div className="social-icons-form">
               <a href="#"><FaYoutube /></a>
               <a href="#"><FaInstagram /></a>
@@ -63,19 +56,16 @@ const FormComponent = () => {
 }
 
 
-// (3) ده "المكون الأساسي" للصفحة (البيانات يمين، الفورم شمال)
 const ContactPage = () => {
   return (
     <PageLayout>
       
-      {/* --- (العمود اليمين) البيانات --- */}
       <div className="info-container">
         <div className="info-block">
           <h2>تواصل معنا</h2>
           <p>نحن هنا للإجابة على جميع أسئلتك وملاحظاتك.</p>
         </div>
 
-        {/* --- بيانات التواصل --- */}
         <div className="info-block">
           <div className="info-item">
             <FaMapMarkerAlt />
@@ -100,11 +90,9 @@ const ContactPage = () => {
           </div>
         </div>
 
-        {/* --- زراير تحميل التطبيق (بالستايل الجديد) --- */}
         <div className="info-block download-section">
           <h3>حمل تطبيقنا</h3>
           <div className="download-buttons">
-            {/* (ده الستايل الزجاجي الجديد) */}
             <a href="#" className="store-btn">
               <FaApple />
               <span>
@@ -123,7 +111,6 @@ const ContactPage = () => {
         </div>
       </div>
 
-      {/* --- (العمود الشمال) الفورم --- */}
       <div className="form-container">
         <FormComponent />
       </div>
@@ -132,7 +119,7 @@ const ContactPage = () => {
   );
 }
 
-// (4) ده الـ CSS الخاص "بالفورم" (زي ما هو متغيرش)
+//  ده الـ CSS بتاع الفورم )
 const StyledFormWrapper = styled.div`
   width: 100%;
   max-width: 450px;
@@ -193,7 +180,7 @@ const StyledFormWrapper = styled.div`
   .input-icon {
     height: 1.3em;
     width: 1.3em;
-    fill: #FFD700; /* اللون الذهبي */
+    fill: #FFD700; 
   }
   
   .icon-message {
@@ -233,7 +220,7 @@ const StyledFormWrapper = styled.div`
     outline: none;
     transition: 0.4s ease-in-out;
     background-color: #252525;
-    color: #FFD700; /* اللون الذهبي */
+    color: #FFD700; 
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
@@ -252,7 +239,7 @@ const StyledFormWrapper = styled.div`
   }
 
   .social-icons-form a {
-    color: #ffd900ff; /* اللون الذهبي */
+    color: #ffd900ff; 
     font-size: 1.5rem;
     transition: all 0.3s ease;
   }
@@ -263,7 +250,7 @@ const StyledFormWrapper = styled.div`
   }
 `;
 
-// (5) ده الـ CSS "الجديد" الخاص "بتقسيم الصفحة"
+//  ده الـ CSS "
 const PageLayout = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -272,8 +259,6 @@ const PageLayout = styled.div`
   align-items: center;
   min-height: 90vh;
   
-  /* (تعديل) الخلفية بقت نفس لون النافبار الغامق */
-  /* (ده هيبان بس لو الثيم غامق) */
   background-color: var(--card-bg); 
 
   position: relative;
@@ -282,26 +267,24 @@ const PageLayout = styled.div`
   .form-container,
   .info-container {
     z-index: 1; 
-    position: relative; /* (تعديل) مهم عشان الخلفية الباهتة */
+    position: relative; 
   }
 
-  /* --- تنسيقات العمود اليمين (البيانات) --- */
   .info-container {
     color: var(--text-main);
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
 
-    /* (تعديل) الخلفية الباهتة بقت هنا */
     &::before {
       content: '✉️'; 
       position: absolute;
       font-size: 30rem;
       color: var(--border); 
       opacity: 0.3;
-      z-index: -1; /* (تعديل) خليها ورا الكلام */
+      z-index: -1; 
       top: 50%;
-      left: 50%; /* (تعديل) بقت في نص العمود اليمين */
+      left: 50%; 
       transform: translate(-50%, -50%) rotate(-15deg);
     }
   }
@@ -347,7 +330,6 @@ const PageLayout = styled.div`
     }
   }
 
-  /* --- (قسم تحميل التطبيق بالستايل الزجاجي) --- */
   .download-section h3 {
     font-size: 1.5rem;
     color: var(--text-main);
@@ -359,25 +341,22 @@ const PageLayout = styled.div`
     flex-wrap: wrap;
   }
   
-  /* (تعديل) ده الستايل الزجاجي زي الصورة */
   .store-btn {
     display: flex;
     align-items: center;
     gap: 0.75rem;
     padding: 0.5rem 1rem;
-    /* (تعديل) خلفية زجاجية غامقة */
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
-    color: #fff; /* (تعديل) النص أبيض */
+    color: #fff; 
     border-radius: 8px;
     text-decoration: none;
     transition: all 0.3s ease;
-    /* (تعديل) بوردر خافت */
     border: 1px solid rgba(255, 255, 255, 0.1); 
 
     svg {
       font-size: 2rem;
-      color: #fff; /* (تعديل) الأيقونة بيضا */
+      color: #fff; 
     }
     span {
       display: flex;
@@ -399,12 +378,10 @@ const PageLayout = styled.div`
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
 
-  /* --- (مهم) تعديلات الموبايل --- */
   @media (max-width: 960px) {
     grid-template-columns: 1fr;
     gap: 4rem;
 
-    /* (تعديل للعربي) البيانات الأول بعدين الفورم */
     .form-container {
       order: 2;
     }
@@ -413,7 +390,7 @@ const PageLayout = styled.div`
       text-align: center; 
       
       &::before {
-        display: none; /* إخفاء الخلفية الباهتة في الموبايل */
+        display: none; 
       }
     }
     

@@ -1,37 +1,36 @@
 .header-hero {
   height: 90vh;
   width: 100%;
-  position: relative; /* (مهم جداً عشان الطبقات) */
+  position: relative; 
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #FFFFFF; /* (النص هنا دايماً أبيض عشان فوق الـ 3D) */
+  color: #FFFFFF; 
   overflow: hidden;
   
   /* (لون احتياطي لو الـ Spline محملش أو النت فصل) */
   background-color: #0A0F1E; 
 }
 
-/* 1. حاوية الـ 3D (الطبقة اللي تحت) */
+/*  الـ 3D (الطبقة اللي تحت) */
 .header-3d-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1; /* (في الخلف) */
+  z-index: 1; 
 }
 
 /* 2. حاوية النص (الطبقة اللي فوق) */
 .header-overlay {
-  /* (خلفية شفافة عشان النص يتقري) */
   background: rgba(10, 15, 30, 0.4); 
-  backdrop-filter: blur(5px); /* (تأثير بلور جميل) */
+  backdrop-filter: blur(5px); 
   padding: 2rem 3rem;
   border-radius: 10px;
   position: relative; 
-  z-index: 2; /* (فوق الانيميشن) */
+  z-index: 2; 
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -44,15 +43,10 @@
 .header-hero p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  color: #E5E7EB; /* (أبيض هادئ) */
+  color: #E5E7EB; 
 }
 
 
-/* ------------------------------------------- */
-/* --- 3. أكواد الزرار (بتاع الأسهم والدايرة) --- */
-/* ------------------------------------------- */
-
-/* (ده الـ Link اللي بيوسط الزرار) */
 .button-link-wrapper {
   text-decoration: none;
   display: block;
@@ -61,8 +55,6 @@
   margin-top: 2rem;
 }
 
-/* (ده كان كلاس الزرار القديم - مش موجود في النسخة دي) */
-/* .btn-wrapper { ... } */
 
 .animated-button {
   position: relative;
@@ -73,7 +65,7 @@
   border: 4px solid;
   border-color: transparent;
   font-size: 16px;
-  background-color: inherit; /* (ده كان من تعديل الزراير اللي تحت) */
+  background-color: inherit; 
   border-radius: 100px;
   font-weight: 600;
   color: var(--text-main); 
@@ -152,23 +144,22 @@
   opacity: 1;
 }
 
-/* ------------------------------------------- */
-/* --- 4. تعديلات الريسبونسف للهيدر --- */
+
+/* --- تعديلات الريسبونسف للهيدر --- */
 /* ------------------------------------------- */
 
 @media (max-width: 768px) {
   .header-hero h1 {
-    font-size: 2.5rem; /* (تصغير الخط) */
+    font-size: 2.5rem; 
   }
   .header-hero p {
-    font-size: 1.1rem; /* (تصغير الخط) */
+    font-size: 1.1rem; 
     margin-bottom: 1.5rem;
   }
   .header-overlay {
-    padding: 1.5rem; /* (تصغير البادينج) */
+    padding: 1.5rem; 
   }
-  
-  /* (تصغير الزرار بتاع الأسهم) */
+
   .animated-button {
     font-size: 14px;
     padding: 12px 30px;

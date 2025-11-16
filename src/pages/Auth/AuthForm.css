@@ -4,7 +4,7 @@
   align-items: center;
   min-height: 90vh;
   padding: 4rem 2rem;
-  background-color: var(--bg); /* الصفحة كلها بتاخد لون الثيم */
+  background-color: var(--bg); 
 }
 
 .auth-card {
@@ -13,12 +13,11 @@
   display: flex;
   background-color: var(--card-bg);
   border-radius: 20px;
-  overflow: hidden; /* مهم عشان يقص الكيرف */
+  overflow: hidden; 
   box-shadow: 0 10px 40px var(--shadow);
-  position: relative; /* مهم عشان الكيرف */
+  position: relative; 
 }
 
-/* 1. البانل الجانبي (المتدرج) */
 .auth-panel {
   flex: 1;
   padding: 4rem 3rem;
@@ -27,11 +26,10 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* اللون المتدرج بناءً على الباليتة */
   background: var(--gradient); 
-  color: #FFFFFF; /* النص هنا دايماً أبيض */
-  z-index: 2; /* فوق الكيرف */
-  position: relative; /* عشان يبقى فوق الكيرف */
+  color: #FFFFFF; 
+  z-index: 2;
+  position: relative; /
 }
 
 .auth-panel h2 {
@@ -42,7 +40,7 @@
   font-size: 1.1rem;
   margin-bottom: 2rem;
   line-height: 1.6;
-  color: #E5E7EB; /* أبيض هادئ */
+  color: #E5E7EB; 
 }
 
 .toggle-btn {
@@ -55,15 +53,14 @@
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-decoration: none; /* عشان ده Link */
+  text-decoration: none; 
 }
 .toggle-btn:hover {
   background: #FFFFFF;
-  color: var(--primary); /* لون النص هيتغير للبنفسجي */
+  color: var(--primary); 
   text-decoration: none;
 }
 
-/* 2. قسم الفورم (الأبيض/الغامق) */
 .auth-form-section {
   flex: 1;
   padding: 3rem;
@@ -71,7 +68,7 @@
   flex-direction: column;
   justify-content: center;
   color: var(--text-main);
-  z-index: 2; /* فوق الكيرف */
+  z-index: 2;
   position: relative;
 }
 
@@ -99,7 +96,7 @@
   width: 100%;
   padding: 1rem;
   border: 1px solid var(--border);
-  background-color: var(--bg); /* خلفية Input زي خلفية الصفحة */
+  background-color: var(--bg); 
   color: var(--text-main);
   border-radius: 8px;
   font-size: 1rem;
@@ -131,7 +128,7 @@
   transition: background 0.3s ease;
 }
 .submit-btn:hover {
-  background: var(--gradient); /* هوفر متدرج */
+  background: var(--gradient); 
 }
 
 .form-check {

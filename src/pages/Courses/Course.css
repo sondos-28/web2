@@ -17,7 +17,6 @@
   color: var(--text-secondary);
 }
 
-/* محتوى الدرس هيستخدم لون الكارد */
 .lesson-content {
   background: var(--card-bg);
   padding: 2rem;
@@ -49,9 +48,8 @@
   padding-right: 20px;
 }
 
-/* تنسيق الأكواد الثابتة */
 .lesson-content code {
-  background: var(--bg); /* خلفية خفيفة */
+  background: var(--bg); 
   color: var(--accent);
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
@@ -59,7 +57,7 @@
   border: 1px solid var(--border);
 }
 .lesson-content pre {
-  background: var(--card-bg); /* زي الكارد */
+  background: var(--card-bg); 
   padding: 1rem;
   border-radius: 5px;
   overflow-x: auto;

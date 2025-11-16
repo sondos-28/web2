@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// 1. إحنا هنستقبل "theme" و "onToggle" كـ props من الـ Navbar
 const Switch = ({ theme, onToggle }) => {
   return (
     <StyledWrapper>
@@ -54,10 +53,8 @@ const Switch = ({ theme, onToggle }) => {
   );
 }
 
-// 3.  كود الـ CSS و
+//   كود الـ CSS 
 const StyledWrapper = styled.div`
-  /* (انسخ كل كود الـ CSS اللي بعته بالظبط هنا) */
-  /* ... من .theme-switch { ...  لحد ... } @keyframes auroraWave ... */
   .theme-switch {
     --toggle-size: 15px;
     /* the size is adjusted using font-size,
