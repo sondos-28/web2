@@ -60,7 +60,7 @@ const AboutPage = () => {
 
         {/* --- 3. بيانات المشروع --- */}
         <ProjectInfo>
-          <h4><FaBook /> مشروع التربية العملي</h4>
+          <h4><FaBook /> مهمة التربية العملي</h4>
           <div className="info-line">
             <FaSchool />
             <p>مدرسة أم المؤمنين الثانوية بنات</p>
